@@ -1,8 +1,7 @@
 #include "main.h"
 /**
-*
 *binary_to_uint - converts number in base two to an uinsigned int.
-*@n: pointer to a string containing the number in base 2
+*@b: pointer to a string containing the number in base 2
 *
 *Return: unsigned int with a decimal value of number in base 2 or 0 if error
 */
