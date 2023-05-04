@@ -1,9 +1,15 @@
 #include "main.h"
+/**
+* expo - calcalues the base to the power
+* @base: base of the power
+* @exp: power of the exponent
+*
+* Return: value of the exponent
+*/
 
 unsigned long int expo(usigned int base, unsigned int exp)
 {
-	unsigned long int number;
-	insigned int counter;
+	unsigned long int number, counter;
 
 	number = 1;
 	for (counter = 1; counter <= exp; counter++)
@@ -11,7 +17,12 @@ unsigned long int expo(usigned int base, unsigned int exp)
 	return (number);
 }
 
-
+/**
+* print_binary - prints a number in binary notation
+* @n: number to print
+*
+* Return: void
+*/
 
 
 void print_binary(unsigned long int n)
@@ -21,8 +32,8 @@ void print_binary(unsigned long int n)
 	char prompt;
 
 	prompt = 0;
-	div = expo(2, sizeof(unsigned long int) * 8-1);
-	while(div != 2)
+	div = expo(2, sizeof(unsigned long int) * 8 - 1);
+	while (div != 2)
 	{
 		ch = n & div;
 		if (ch == div)
@@ -30,7 +41,7 @@ void print_binary(unsigned long int n)
 			prompt = 1;
 			_putchar('1');
 		}
-		else if (prompt == 1 || div ==1)
+		else if (prompt == 1 || div == 1)
 		{
 			_putchar ('0');
 		}
