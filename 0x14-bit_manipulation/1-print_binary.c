@@ -14,7 +14,7 @@ unsigned long int expo(usigned int base, unsigned int exp)
 
 
 
-void print_binary(unsigned long int m)
+void print_binary(unsigned long int n)
 {
 	unsigned long int div;
 	unsigned long int ch;
@@ -24,7 +24,7 @@ void print_binary(unsigned long int m)
 	div = expo(2, sizeof(unsigned long int) * 8-1);
 	while(div != 2)
 	{
-		ch = m & div;
+		ch = n & div;
 		if (ch == div)
 		{
 			prompt = 1;
