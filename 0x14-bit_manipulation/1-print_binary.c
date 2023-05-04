@@ -7,7 +7,7 @@
 * Return: value of the exponent
 */
 
-unsigned long int expo(usigned int base, unsigned int exp)
+unsigned long int expo(unsigned int base, unsigned int exp)
 {
 	unsigned long int number, counter;
 
