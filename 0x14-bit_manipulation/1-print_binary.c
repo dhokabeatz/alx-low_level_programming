@@ -9,7 +9,8 @@
 
 unsigned long int expo(unsigned int base, unsigned int exp)
 {
-	unsigned long int number, counter;
+	unsigned long int number;
+	unsigned int counter;
 
 	number = 1;
 	for (counter = 1; counter <= exp; counter++)
@@ -27,8 +28,7 @@ unsigned long int expo(unsigned int base, unsigned int exp)
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int div;
-	unsigned long int ch;
+	unsigned long int div, ch;
 	char prompt;
 
 	prompt = 0;
