@@ -1,51 +1,48 @@
 #include "main.h"
+
 /**
-* expo - calcalues the base to the power
-* @base: base of the power
-* @exp: power of the exponent
-*
-* Return: value of the exponent
-*/
-
-unsigned long int expo(unsigned int base, unsigned int exp)
+ * _pow - calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
+ *
+ * Return: value of (base ^ power)
+ */
+unsigned long int _pow(unsigned int base, unsigned int power)
 {
-	unsigned long int number;
-	unsigned int counter;
+	unsigned long int num;
+	unsigned int i;
 
-	number = 1;
-	for (counter = 1; counter <= exp; counter++)
-		number *= base;
-	return (number);
+	num = 1;
+	for (i = 1; i <= power; i++)
+		num *= base;
+	return (num);
 }
 
 /**
-* print_binary - prints a number in binary notation
-* @n: number to print
-*
-* Return: void
-*/
-
-
+ * print_binary - prints a number in binary notation
+ * @n: number to print
+ *
+ * Return: void
+ */
 void print_binary(unsigned long int n)
 {
-	unsigned long int div, ch;
-	char prompt;
+	unsigned long int divisor, check;
+	char flag;
 
-	prompt = 0;
-	div = expo(2, sizeof(unsigned long int) * 8 - 1);
-	while (div != 2)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		ch = n & div;
-		if (ch == div)
+		check = n & divisor;
+		if (check == divisor)
 		{
-			prompt = 1;
+			flag = 1;
 			_putchar('1');
 		}
-		else if (prompt == 1 || div == 1)
+		else if (flag == 1 || divisor == 1)
 		{
-			_putchar ('0');
+			_putchar('0');
 		}
-		div >>= 1;
+		divisor >>= 1;
 	}
-
 }
