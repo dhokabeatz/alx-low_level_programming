@@ -19,11 +19,11 @@ int main(int ac, char **av)
     }
     
     n = read_textfile(av[1], 114);
-    
+
     printf("\n(printed chars: %li)\n", n);
-    
+
     n = read_textfile(av[1], 1024);
-    
+
     printf("\n(printed chars: %li)\n", n);
     return (0);
 }
