@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	file_data = open(filename,O_RDONLY);
+	file_data = open(filename, O_RDONLY);
 	if (file_data == -1)
 	{
 		return (0);
@@ -34,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
         	return (0);
     	}
 
-	len = read(file_data,buffer,letters);
+	len = read(file_data, buffer, letters);
 
 	if (len == -1)
 	{
@@ -42,7 +42,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	len_w = write(STDOUT_FILENO,buffer,len);
+	len_w = write(STDOUT_FILENO, buffer, len);
 	free(buffer);
 
 	if (len != len_w)
