@@ -19,36 +19,28 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
 	file_data = open(filename, O_RDONLY);
 	if (file_data == -1)
 	{
 		return (0);
 	}
-
-	buffer = malloc(sizeof(char ) * letters);
-
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-    	{
-        	close(file_data);
-        	return (0);
-    	}
-
+	{
+		close(file_data);
+		return (0);
+	}
 	len = read(file_data, buffer, letters);
-
 	if (len == -1)
 	{
 		free(buffer);
 		return (0);
 	}
-
 	len_w = write(STDOUT_FILENO, buffer, len);
 	free(buffer);
-
 	if (len != len_w)
 	{
 		return (0);
 	}
 	return (len_w);
-
 }
