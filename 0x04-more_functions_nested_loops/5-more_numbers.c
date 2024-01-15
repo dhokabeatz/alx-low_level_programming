@@ -2,19 +2,21 @@
 
 /**
  * more_numbers - prints 10 times the numbers, from 0 to 14
- * Return: return nothing
+ * followed by a new line
+ * Description: Can only use _putchar 3 times
  */
+
 void more_numbers(void)
 {
-	int a, b;
+	int i, j;
 
-	for (a = 0; a < 10; a++)
+	for (i = 0; i < 10; i++)
 	{
-		for (b = 0; b < 15; b++)
+		for (j = 0; j < 15; j++)
 		{
-			if (b >= 10)
-				_putchar(b / 10 + 48);
-			_putchar(b % 10 + 48);
+			if (j >= 10)
+				_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
 		}
 		_putchar('\n');
 	}

@@ -1,27 +1,33 @@
-#include "stdio.h"
+#include <stdio.h>
 
 /**
- * main - prints "Fizz" for numbers divisible by 3,
- * prints "Buzz" for numbers divisible by 5,
- * prints "FizzBuzz" for numbers divisible by 3 and 5
- * for numbers 1-100
+ * main - main block, solve fizz buzz from numbers 1 to 100
+ * Description: Multiples of 3, print Fizz. Multiples of 5, print Buzz.
+ * Multiples of both 3 and 5 should print FizzBuzz.
  * Return: 0
  */
+
 int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 99; i++)
+	i = 1;
+	while (i <= 100)
 	{
-		if (i % 15 == 0)
-			printf("FizzBuzz ");
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else if (i % 5 == 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else
-			printf("%i ", i);
+			printf("%d", i);
+
+		if (i != 100)
+			printf(" ");
+		i++;
 	}
-	printf("Buzz\n");
+	printf("\n");
+
 	return (0);
 }
